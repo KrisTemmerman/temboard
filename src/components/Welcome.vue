@@ -1,7 +1,7 @@
 <template>
   <div id="welcome">
       <Clock />
-      <span class="small"></span>   {{msg}}
+      <span class="small">{{msg}}</span>
   </div>
 </template>
 
@@ -9,12 +9,12 @@
 import Clock from './Clock'
 export default {
   name: 'Greeting',
-  components:{
+  components: {
     Clock
   },
   data () {
     return {
-      msg:'Hello Kris',
+      msg: 'Hello Kris',
       images: []
     }
   }
@@ -32,7 +32,7 @@ export default {
     padding-top:30vh;
 }
 .small{
-      font-size:5rem;
+      font-size:2rem;
 }
 
 </style>

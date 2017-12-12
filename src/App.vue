@@ -2,19 +2,26 @@
   <div id="app">
     <div class="overlay"></div>
     <Welcome />
+    <WorkDay />
+    <Weather />
   </div>
 </template>
 
 <script>
 import Welcome from './components/Welcome'
+import WorkDay from './components/WorkDay'
+import Weather from './components/Weather'
+
 export default {
   name: 'app',
-    data: {
+  data: {
     results: []
   },
 
   components: {
-    Welcome
+    Welcome,
+    WorkDay,
+    Weather
   }
 
 }
@@ -28,6 +35,8 @@ export default {
 }
 
 #app {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:white;
   width:100vw;
   height:100vh;
   background:

@@ -1,6 +1,6 @@
 <template>
     <div class="clock">
-        {{time}}
+        {{timenow}}
     </div>
 </template>
 
@@ -8,13 +8,18 @@
 import moment from 'moment'
 export default {
   name: 'Clock',
-
   data () {
     return {
       msg: 'Hello Kris',
-      time: moment().format('HH:mm')
+      timenow: moment().format('HH:mm')
     }
+  },
+  mounted: function () {
+    setInterval(() => {
+      this.timenow = moment().format('HH:mm')
+    }, 1000)
   }
+
 }
 </script>
 
